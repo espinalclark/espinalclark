@@ -10,23 +10,31 @@
   <img src="assets/intro.gif" width="600" alt="Intro Pentesting">
 </div>
 
----
-<!-- About me -->
-<div style="display: flex; align-items: center; justify-content: space-between;">
-  <div>
-    <h1>About me.</h1>
-    <ul>
-      <li>I'm a pentesting enthusiast.</li>
-      <li>I'm currently practicing and learning web hacking.</li>
-      <li>I'm deepening my knowledge of Linux, networking, and scripting.</li>
-      <li>I am building a portfolio of practical pentesting projects.</li>
-      <li>I am preparing for industry certifications and Capture The Flag (CTF) competitions.</li>
-    </ul>
-  </div>
-  <img alt="GIF" height="160px" src="https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif" />
+<h1>About me.</h1>
+
+<div align="center">
+
+<table>
+<tr>
+<td width="60%" align="left" valign="middle">
+
+- I'm a pentesting enthusiast.  
+- I'm currently practicing and learning web hacking.  
+- I'm deepening my knowledge of Linux, networking, and scripting.  
+- I am building a portfolio of practical pentesting projects.  
+- I am preparing for industry certifications and Capture The Flag (CTF) competitions.  
+
+</td>
+<td width="40%" align="center" valign="middle">
+
+<img src="https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif" height="160px" style="border-radius:10px;"/>
+
+</td>
+</tr>
+</table>
+
 </div>
 
----
 
 <h1>Skills</h1>
 <div align="center">
