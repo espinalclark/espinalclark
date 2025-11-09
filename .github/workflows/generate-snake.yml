@@ -2,38 +2,40 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # se ejecuta todos los días a medianoche UTC
-  workflow_dispatch:       # permite ejecutarlo manualmente desde Actions
-  push:
-    branches:
-      - main
+    - cron: '0 0 * * *' # cada día a medianoche
+  workflow_dispatch: # para poder ejecutarlo manualmente
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v3
 
-      - name: Generate snake (SVG + GIF)
-        id: snk
-        uses: Platane/snk@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          github_user_name: ${{ github.repository_owner }} # tu usuario automáticamente si es repo de perfil
-          svg_out_path: output/github-contribution-grid-snake.svg
-          gif_out_path: output/github-snake.gif
+          python-version: '3.x'
 
-      - name: Commit and push generated files
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pyyaml
+
+      - name: Download github-snake.py
+        run: |
+          curl -s https://raw.githubusercontent.com/Ashutosh00710/github-readme-activity-graph/master/github-snake.py -o github-snake.py
+
+      - name: Generate Snake SVG
+        run: |
+          python3 github-snake.py --username ${{ github.repository_owner }} --output output/github-contribution-grid-snake.svg
+
+      - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/github-contribution-grid-snake.svg output/github-snake.gif || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: update contribution snake"
-            git push
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/github-contribution-grid-snake.svg
+          git commit -m "Generate snake contribution" || echo "Nothing to commit"
+          git push
+
