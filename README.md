@@ -15,11 +15,15 @@
 <!-- About me -->
 <img align="right" alt="GIF" height="160px" src="https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif" />
 
-## I'm a Pentesting & Cybersecurity Enthusiast
+## <h1> About me.</h1>
 
--  Currently practicing and learning **Web Hacking, System Exploitation, and Metasploit**  
--  Deepening knowledge in **Linux, Networking, and Python scripting**   
--  Goal: Become one of the **top pentesters in the world**
+
+- I'm a pentesting enthusiast.  
+- I'm currently practicing and learning web hacking.  
+- I'm deepening my knowledge of Linux, networking, and scripting.  
+- I am building a portfolio of practical pentesting projects.  
+- I am preparing for industry certifications and Capture The Flag (CTF) competitions.
+
 
 ---
 
@@ -51,7 +55,7 @@
 <!-- Cuadros centrados y ordenados -->
 <div align="center">
 
-| Most Used Languages | Stats & Streak |
+| Most Used Languages |  Streak |
 |----------------------|----------------|
 | <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=espinalclark&theme=chartreuse-dark&show_icons=true&hide_border=true&layout=compact&title_color=00ff99&text_color=00ff99&bg_color=000000" height="200"/> | <img src="https://github-readme-streak-stats.herokuapp.com?user=espinalclark&theme=chartreuse-dark&hide_border=true&background=000000&ring=00ff99&fire=00ff99&currStreakLabel=00ff99" height="200"/> |
 
