@@ -11,19 +11,20 @@
 </div>
 
 ---
-
 <!-- About me -->
-<img align="right" alt="GIF" height="160px" src="https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif" />
-
-## <h1> About me.</h1>
-
-
-- I'm a pentesting enthusiast.  
-- I'm currently practicing and learning web hacking.  
-- I'm deepening my knowledge of Linux, networking, and scripting.  
-- I am building a portfolio of practical pentesting projects.  
-- I am preparing for industry certifications and Capture The Flag (CTF) competitions.
-
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <h1>About me.</h1>
+    <ul>
+      <li>I'm a pentesting enthusiast.</li>
+      <li>I'm currently practicing and learning web hacking.</li>
+      <li>I'm deepening my knowledge of Linux, networking, and scripting.</li>
+      <li>I am building a portfolio of practical pentesting projects.</li>
+      <li>I am preparing for industry certifications and Capture The Flag (CTF) competitions.</li>
+    </ul>
+  </div>
+  <img alt="GIF" height="160px" src="https://media.giphy.com/media/Ah3zHH7hvsSB2/giphy.gif" />
+</div>
 
 ---
 
