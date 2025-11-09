@@ -1,7 +1,9 @@
-name: Generate Snake
+name: Generate Snake (fallback)
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -9,31 +11,35 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install deps (none required for fallback)
         run: |
           python -m pip install --upgrade pip
-          pip install requests pyyaml pillow
 
-      - name: Download working github-snake script
+      - name: Show repo files (debug)
+        run: ls -la
+
+      - name: Run fallback snake generator
         run: |
-          curl -s -L https://raw.githubusercontent.com/Ashutosh00710/github-readme-activity-graph/master/github-snake.py -o github-snake.py
+          python3 github-snake.py --username ${{ github.repository_owner }} --output output/github-contribution-grid-snake.svg
 
-      - name: Generate Snake SVG
-        run: |
-          python github-snake.py --username ${{ github.repository_owner }} --output output/github-contribution-grid-snake.svg
-
-      - name: Commit & Push
+      - name: Commit & Push generated files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/github-contribution-grid-snake.svg
-          git commit -m "Generate snake contribution" || echo "Nothing to commit"
-          git push
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/github-contribution-grid-snake.svg || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update contribution snake (fallback)"
+            git push
+          fi
 
