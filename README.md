@@ -39,4 +39,3 @@
 <div align="center">
 <img src="https://skillicons.dev/icons?i=arch,kali" height="40"/>
 </div>
-
