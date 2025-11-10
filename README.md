@@ -10,20 +10,20 @@
   <img src="assets/intro.gif" width="600" alt="Intro Pentesting">
 </div>
 
-<h1>About me.</h1>
+<h1>About me</h1>
 
 <div align="center">
 
 <table>
 <tr>
 <td width="60%" align="left" valign="middle">
-
-- I'm a pentesting enthusiast.  
-- I'm currently practicing and learning web hacking.  
-- I'm deepening my knowledge of Linux, networking, and scripting.  
-- I am building a portfolio of practical pentesting projects.  
-- I am preparing for industry certifications and Capture The Flag (CTF) competitions.  
-
+  
+- I'm passionate about ethical hacking and everything related to penetration testing.
+- I'm self-taught; I like to learn by breaking things down and understanding how they work.
+- I spend hours in labs, CTFs, and on vulnerable machines.
+- I primarily work in Linux environments.
+- I'm always looking to improve my techniques and learn something new every day.
+  
 </td>
 <td width="40%" align="center" valign="middle">
 
@@ -50,7 +50,7 @@
 <h1>Operating Systems</h1>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=arch,kali" height="40" alt="Arch & Kali"/>
+  <img src="https://skillicons.dev/icons?i=arch,kali,windows" height="40" alt="Arch , windows & Kali"/>
 </div>
 
 ---
